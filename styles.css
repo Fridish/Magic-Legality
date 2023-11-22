@@ -1,0 +1,42 @@
+:root {
+  --Off-Pink: #ffe4d9;
+  --Off-Black: #2f3543;
+}
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(56, 44, 27);
+}
+
+#header {
+  font-size: 40px;
+  color: var(--Off-Pink);
+}
+#searchCard {
+  width: 285px;
+  height: 45px;
+  border-radius: 35px;
+  background-color: var(--Off-Black);
+  border-style: none;
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+#getRandom {
+  width: 160px;
+  height: 30px;
+  border-style: solid;
+  background-color: transparent;
+  border-bottom: 2px solid var(--Off-Pink);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  color: var(--Off-Pink);
+}
