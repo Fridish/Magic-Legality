@@ -12,11 +12,12 @@ body {
   align-items: center;
   flex-direction: column;
   width: auto;
-  height: 100vh;
+  height: auto;
   background-color: rgb(56, 44, 27);
   margin: 0px;
   background-size: cover;
-  background-image: url(https://images2.alphacoders.com/943/943323.jpg);
+  /*background-image: url(https://images2.alphacoders.com/943/943323.jpg);*/
+  background-color: aquamarine;
 }
 .content {
   position: relative;
