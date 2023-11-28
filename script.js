@@ -25,3 +25,27 @@ const displayCard = (recievedData) => {
   cardName.textContent = recievedData.name;
   mtgCard.appendChild(cardName);
 };
+
+//display in which formats the cards is legal
+const displayLegality = (recievedData) => {
+  const legality = document.createElement("ul");
+  legality.classList.add("legality");
+  legality.textContent = "Legal formats:";
+  mtgCard.appendChild(legality);
+  for (const legalities in recievedData) {
+    if (legalities == "legalities") {
+      for (const key in recievedData.legalities) {
+        const value = recievedData.legalities[key];
+        {
+          if (value === "legal") {
+            const legalFormat = document.createElement("li");
+            legalFormat.textContent = key;
+            legality.appendChild(legalFormat);
+            console.log(key);
+            legality.appendChild(legalFormat);
+          }
+        }
+      }
+    }
+  }
+};
