@@ -30,6 +30,9 @@ li,
 #ul {
   font-size: 20px;
 }
+#ulLabel {
+  font-size: 30px;
+}
 .ulContainer {
   display: flex;
   justify-content: center;
