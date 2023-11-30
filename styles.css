@@ -12,18 +12,38 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: fit-content;
   overflow: scroll;
   background-color: rgb(56, 44, 27);
   margin: 0px;
-  background-size: cover;
-  /*background-image: url(https://images2.alphacoders.com/943/943323.jpg);*/
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-image: url(background-small.png);
   background-color: var(--Off-White);
 }
-#getspecific {
-  width: 20px;
-  height: 20px;
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 25px;
+  background-color: var(--Off-Black);
+  opacity: 0.7;
+  border-radius: 35px;
+  margin-bottom: 45px;
+  padding-left: 5px;
+}
+#searchCard {
+  border-style: none;
+  font-size: 16px;
+  color: var(--Off-Pink);
+  background-color: transparent;
+}
+#getSpecific {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-style: none;
 }
 li,
 #ul {
@@ -59,18 +79,9 @@ li,
 #header {
   font-size: 40px;
   color: var(--Off-Pink);
+  margin-top: 150px;
 }
-#searchCard {
-  width: 200px;
-  height: 25px;
-  border-radius: 35px;
-  background-color: var(--Off-Black);
-  opacity: 0.8;
-  border-style: none;
-  font-size: 16px;
-  margin-bottom: 45px;
-  color: var(--Off-Pink);
-}
+
 #getRandom {
   width: 160px;
   height: 30px;
