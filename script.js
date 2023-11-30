@@ -25,7 +25,8 @@ const displayCard = (recievedData) => {
 
 //display in which formats the cards is legal
 const displayLegality = (recievedData) => {
-  const legality = document.getElementById("ul");
+  const legality = document.getElementById("ulLabel");
+  const ul = document.getElementById("ul");
   legality.textContent = "Legal formats:";
   for (const legalities in recievedData) {
     if (legalities == "legalities") {
@@ -35,7 +36,7 @@ const displayLegality = (recievedData) => {
           if (value === "legal") {
             const legalFormat = document.createElement("li");
             legalFormat.textContent = key;
-            legality.appendChild(legalFormat);
+            ul.appendChild(legalFormat);
           }
         }
       }
