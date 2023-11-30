@@ -21,7 +21,10 @@ body {
   /*background-image: url(https://images2.alphacoders.com/943/943323.jpg);*/
   background-color: var(--Off-White);
 }
-
+#getspecific {
+  width: 20px;
+  height: 20px;
+}
 li,
 #ul {
   list-style: none;
