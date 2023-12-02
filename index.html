@@ -16,15 +16,17 @@
     <h1 id="header">Is it Legal?</h1>
     <div class="inputContainer">
     <input type="text" id="searchCard" name="seachCard" placeholder="  Enter card name here" />
-    <button id="getSpecific" for="searchCards" type="submit"> <img src="searchIcon.svg" alt="search icon"> </button>
+    <button id="getSpecific" for="searchCards" type="submit"> <img id="searchIcon" src="searchIconBig.svg" alt="search icon"> </button>
   </div>
-    <button id="getRandom">Get random card</button>
+    <button id="getRandom">Get Random Card</button>
     <div id="resultContainer">
       <div id="mtgCard">
         <img id="mtgImg" src="" alt="" />
         <p id="cardHeader"></p>
       </div class="ulContainer">
-      <ul id="ul"></ul>
+      <ul id="ul">
+        <p id="ulLabel"></p>
+      </ul>
     </div>
     <script src="script.js"></script>
   </body>
