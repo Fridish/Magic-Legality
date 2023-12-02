@@ -1,9 +1,17 @@
 let api = "https://api.scryfall.com/cards/";
 let cardName = document.getElementById("searchCard");
 let randomButton = document.getElementById("getRandom");
+seachEnter = document.getElementById("searchCard");
 
 randomButton.addEventListener("click", fetchRandom);
 getSpecific.addEventListener("click", fetchSpecific);
+
+seachEnter.addEventListener("keypress", function (pressKey) {
+  // If the user presses the "Enter" key on the keyboard
+  if (pressKey.key === "Enter") {
+    fetchSpecific();
+  }
+});
 
 //Fetch random card data from scryfall api
 async function fetchRandom() {
@@ -25,6 +33,7 @@ async function fetchSpecific() {
 }
 //display img and card name
 const displayCard = (recievedData) => {
+  document.getElementById("resultContainer").style.backgroundColor = "#2f3543";
   const img = document.getElementById("mtgImg");
   img.src = recievedData.image_uris.normal;
   mtgCard.appendChild(img);
@@ -32,13 +41,15 @@ const displayCard = (recievedData) => {
   cardHeader.textContent = recievedData.name;
 };
 
-fetch;
-
 //display in which formats the cards is legal
 const displayLegality = (recievedData) => {
-  const legality = document.getElementById("ulLabel");
-  const ul = document.getElementById("ul");
-  legality.textContent = "Legal formats:";
+fetch-specific
+  const ulLabel = document.getElementById("ulLabel");
+
+  while (ulLabel.firstChild) {
+    ulLabel.removeChild(ulLabel.firstChild);
+  }
+  ulLabel.textContent = "Legal formats:";
   for (const legalities in recievedData) {
     if (legalities == "legalities") {
       for (const key in recievedData.legalities) {
@@ -47,7 +58,7 @@ const displayLegality = (recievedData) => {
           if (value === "legal") {
             const legalFormat = document.createElement("li");
             legalFormat.textContent = key;
-            ul.appendChild(legalFormat);
+            ulLabel.appendChild(legalFormat);
           }
         }
       }
