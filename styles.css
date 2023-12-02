@@ -3,30 +3,30 @@
   --Off-Black: #2f3543;
   --Off-White: rgb(128, 119, 139);
   --Dark: rgb(28, 28, 37);
+  --Shadow: rgba(27, 26, 26, 0.75);
 }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--Off-Black);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--Off-White);
   border-radius: 30px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--Off-Pink);
 }
 
+/* font, it applies to all elements */
 * {
   font-family: "Josefin Sans", sans-serif;
 }
+
+/* styling that applies to the entire body/main container of the page */
 body {
   display: flex;
   justify-content: center;
@@ -41,6 +41,24 @@ body {
   margin-bottom: 30px;
   color: var(--Off-Pink);
 }
+
+/* styling ofr the header and the info text */
+
+#header {
+  font-size: 40px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+.infoText {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* css for the input and buttons */
 .inputContainer {
   display: flex;
   flex-direction: row;
@@ -51,20 +69,21 @@ body {
   border-radius: 35px;
   margin-bottom: 45px;
   padding-left: 5px;
-  box-shadow: 0px 10px 5px 0px rgba(27, 26, 26, 0.75);
+  box-shadow: 0px 10px 5px 0px var(--Shadow);
 }
+#getSpecific,
 #searchCard {
   border-style: none;
+  background-color: transparent;
+}
+#searchCard {
   width: 160px;
   font-size: 12px;
   color: var(--Off-Pink);
-  background-color: transparent;
 }
 #getSpecific {
   width: 20px;
   height: 100%;
-  background-color: transparent;
-  border-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,13 +103,24 @@ body {
 #getRandom:hover {
   transform: scale(1.01);
 }
-
 #searchIcon {
   transform: scale(0.5);
 }
-#ul {
-  color: var(--Off-Pink);
 
+/* Styling for the container in which the image and list are displayed */
+
+#resultContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  margin-top: 32px;
+  border-radius: 24px;
+}
+
+/* Styling for the Legality-list*/
+#ul {
   list-style-type: circle;
 }
 li {
@@ -115,9 +145,8 @@ li:first-child {
   width: 100%;
   height: 100%;
 }
-.content {
-  position: relative;
-}
+
+/* Syling for the card image and the card name */
 #mtgImg {
   width: 200px;
   height: auto;
@@ -127,25 +156,10 @@ li:first-child {
 }
 #cardHeader {
   font-display: center;
-  color: var(--Off-Pink);
   text-align: center;
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 50px;
-}
-
-#header {
-  font-size: 40px;
-  margin-top: 80px;
-  margin-bottom: 0px;
-}
-.infoText {
-  font-size: 16px;
-  margin-bottom: 20px;
-  margin-top: 12px;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 #getRandom {
   width: 160px;
@@ -160,15 +174,8 @@ li:first-child {
   opacity: 0.6;
 }
 
-#resultContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: fit-content;
-  height: 100%;
-  margin-top: 32px;
-  border-radius: 24px;
-}
+/* breakpoint for mid-sized devices */
+
 @media (width > 550px) {
   #ulLabel {
     font-size: 30px;
@@ -219,14 +226,12 @@ li:first-child {
     transform: scale(0.6);
   }
 }
+
+/*breakpoint for large devices */
+
 @media (width > 1000px) {
   #header {
     font-size: 80px;
-  }
-  #searchCard {
-    width: 640px;
-    height: 50px;
-    font-size: 30px;
   }
   .inputContainer {
     width: 750px;
@@ -234,10 +239,10 @@ li:first-child {
     display: flex;
     justify-content: space-around;
   }
-  #mtgImg {
-    width: 300px;
-    height: auto;
-    margin-left: 50px;
+  #searchCard {
+    width: 640px;
+    height: 50px;
+    font-size: 30px;
   }
   #ulLabel {
     margin-right: 50px;
@@ -250,5 +255,11 @@ li:first-child {
   }
   #getRandom {
     font-size: 24px;
+  }
+
+  #mtgImg {
+    width: 300px;
+    height: auto;
+    margin-left: 50px;
   }
 }
