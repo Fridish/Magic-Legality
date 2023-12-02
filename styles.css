@@ -104,6 +104,9 @@ li {
 li:first-child {
   margin-top: 20px;
 }
+#ulLabel {
+  font-size: 30px;
+}
 .ulContainer {
   display: flex;
   justify-content: center;

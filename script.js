@@ -43,6 +43,7 @@ const displayCard = (recievedData) => {
 
 //display in which formats the cards is legal
 const displayLegality = (recievedData) => {
+fetch-specific
   const ulLabel = document.getElementById("ulLabel");
 
   while (ulLabel.firstChild) {
