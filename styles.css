@@ -18,9 +18,8 @@ body {
   background-color: rgb(56, 44, 27);
   margin: 0px;
   object-fit: cover;
-  background-repeat: no-repeat;
-  background-image: url(background-small.png);
-  background-color: var(--Off-White);
+  margin-bottom: 30px;
+  color: var(--Off-Pink);
 }
 .inputContainer {
   display: flex;
@@ -35,12 +34,13 @@ body {
 }
 #searchCard {
   border-style: none;
-  font-size: 16px;
+  width: 160px;
+  font-size: 12px;
   color: var(--Off-Pink);
   background-color: transparent;
 }
 #getSpecific {
-  width: 100%;
+  width: 20px;
   height: 100%;
   background-color: transparent;
   border-style: none;
@@ -81,8 +81,16 @@ li,
 
 #header {
   font-size: 40px;
-  color: var(--Off-Pink);
-  margin-top: 150px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+.infoText {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #getRandom {
