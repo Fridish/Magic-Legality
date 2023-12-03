@@ -38,28 +38,25 @@ body {
   margin: 0px;
   background-color: var(--Dark);
   object-fit: cover;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: var(--Off-Pink);
 }
 
-/* styling ofr the header and the info text */
+/* styling for the header and the info text */
 
-#header {
+#header_Header {
   font-size: 40px;
   margin-top: 80px;
   margin-bottom: 0px;
 }
-.infoText {
+.header_InfoText {
   font-size: 16px;
-  margin-bottom: 20px;
-  margin-top: 12px;
+  margin: 16px;
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 /* css for the input and buttons */
-.inputContainer {
+.input_Container {
   display: flex;
   flex-direction: row;
   width: 200px;
@@ -67,40 +64,40 @@ body {
   background-color: var(--Off-Black);
   opacity: 0.7;
   border-radius: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 16px;
   padding-left: 5px;
   box-shadow: 0px 10px 5px 0px var(--Shadow);
 }
-#getSpecific,
-#searchCard {
+#button_GetSpecific,
+#input_CardName {
   border-style: none;
   background-color: transparent;
 }
-#searchCard {
+#input_CardName {
   width: 160px;
   font-size: 12px;
   color: var(--Off-Pink);
 }
-#getSpecific {
+#button_GetSpecific {
   width: 20px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#searchCard:focus {
+#input_CardName:focus {
   outline: none;
   border: none;
 }
-#getSpecific:hover,
-#getRandom:hover {
+#button_GetSpecific:hover,
+#button_GetRandom:hover {
   cursor: pointer;
   opacity: 0.9;
 }
-#getSpecific:hover {
+#button_GetSpecific:hover {
   transform: scale(1.08);
 }
-#getRandom:hover {
+#button_GetRandom:hover {
   transform: scale(1.01);
 }
 #searchIcon {
@@ -109,7 +106,7 @@ body {
 
 /* Styling for the container in which the image and list are displayed */
 
-#resultContainer {
+#display_Container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -120,14 +117,23 @@ body {
 }
 
 /* Styling for the Legality-list*/
-#ul {
+#display_Ul,
+.display_UlContainer {
+  display: flex;
+  justify-content: center;
+}
+#display_Ul {
   list-style-type: circle;
+  padding: 0px;
+}
+li,
+#display_UlLabel {
+  margin-left: 16px;
 }
 li {
   font-size: 16px;
-  margin-left: 12px;
 }
-#ulLabel {
+#display_UlLabel {
   margin-right: 20px;
   font-size: 25px;
   margin-top: 0px;
@@ -135,33 +141,31 @@ li {
 li:first-child {
   margin-top: 20px;
 }
-#ulLabel {
+#display_UlLabel {
   font-size: 30px;
 }
-.ulContainer {
-  display: flex;
-  justify-content: center;
+.display_UlContainer {
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
 /* Syling for the card image and the card name */
-#mtgImg {
+#display_CardHeader,
+#display_MtgImg {
+  margin: 16px;
+}
+#display_MtgImg {
   width: 200px;
   height: auto;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
-#cardHeader {
+#display_CardHeader {
   font-display: center;
   text-align: center;
   font-size: 25px;
-  margin-bottom: 10px;
   margin-top: 50px;
 }
-#getRandom {
+#button_GetRandom {
   width: 160px;
   height: 30px;
   border-style: solid;
@@ -177,87 +181,92 @@ li:first-child {
 /* breakpoint for mid-sized devices */
 
 @media (width > 550px) {
-  #ulLabel {
-    font-size: 30px;
-  }
-  #header {
+  /* header/upper body styles */
+  #header_Header {
     font-size: 60px;
   }
-  #mtgImg {
-    margin-bottom: 100px;
-    width: 220px;
-    height: auto;
+  .input_Container {
+    width: 450px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
   }
-  #ul {
-    margin-top: 50px;
+  #button_GetRandom {
+    font-size: 20px;
+    width: auto;
   }
-  li:first-child {
-    margin-top: 30px;
+  #button_GetSpecific {
+    width: 30px;
   }
-  #resultContainer {
+  #searchIcon {
+    transform: scale(0.6);
+  }
+
+  /* display search result styles */
+  #display_Container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: fit-content;
     height: 70%;
   }
-  #cardHeader {
+  #display_MtgImg {
+    margin-bottom: 100px;
+    width: 220px;
+    height: auto;
+  }
+  #display_CardHeader,
+  #display_UlLabel {
     font-size: 30px;
   }
-  #searchCard {
+  #input_CardName {
     width: 350px;
     height: 46px;
     font-size: 24px;
   }
-  .inputContainer {
-    width: 450px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
+  #display_Ul {
+    margin-top: 50px;
   }
-  #getRandom {
-    font-size: 20px;
-    width: auto;
-  }
-  #getSpecific {
-    width: 30px;
-  }
-  #searchIcon {
-    transform: scale(0.6);
+  li:first-child {
+    margin-top: 30px;
   }
 }
 
 /*breakpoint for large devices */
 
 @media (width > 1000px) {
-  #header {
+  /* upper body styles */
+  #header_Header {
     font-size: 80px;
   }
-  .inputContainer {
+  .input_Container {
     width: 750px;
     height: 50px;
     display: flex;
     justify-content: space-around;
   }
-  #searchCard {
+  #input_CardName {
     width: 640px;
     height: 50px;
     font-size: 30px;
   }
-  #ulLabel {
-    margin-right: 50px;
-  }
-  #getSpecific {
+  #button_GetSpecific {
     width: 30px;
+  }
+  #button_GetRandom {
+    font-size: 24px;
   }
   #searchIcon {
     transform: scale(0.8);
   }
-  #getRandom {
-    font-size: 24px;
+
+  /* lower body styles */
+
+  #display_UlLabel {
+    margin-right: 50px;
   }
 
-  #mtgImg {
+  #display_MtgImg {
     width: 300px;
     height: auto;
     margin-left: 50px;
