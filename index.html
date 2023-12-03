@@ -14,20 +14,27 @@
 
   </head>
   <body>
-    <h1 id="header">Is it Legal?</h1>
-    <p class="infoText"> A webpage that displays the legal formats of your Magic: the Gathering cards </p>
-    <div class="inputContainer">
-    <input type="text" id="searchCard" name="seachCard" placeholder="  Enter card name here" />
-    <button id="getSpecific" for="searchCards" type="submit"> <img id="searchIcon" src="searchIconBig.svg" alt="search icon"> </button>
+    <!-- header  -->
+    <h1 id="header_Header">Is it Legal?</h1>
+    <p class="header_InfoText"> A webpage that displays the legal formats of your Magic: the Gathering cards </p>
+
+    <!-- input field -->
+    <div class="input_Container">
+    <input type="text" id="input_CardName" name="input_CardName" placeholder="  Enter card name here" />
+    <button id="button_GetSpecific" for="input_CardName" type="submit"> <img id="searchIcon" src="searchIconBig.svg" alt="search icon"> </button>
   </div>
-    <button id="getRandom">Get Random Card</button>
-    <div id="resultContainer">
-      <div id="mtgCard">
-        <img id="mtgImg" src="" alt="" />
-        <p id="cardHeader"></p>
-      </div class="ulContainer">
-      <ul id="ul">
-        <p id="ulLabel"></p>
+
+    <!-- button for random card -->
+    <button id="button_GetRandom">Get Random Card</button>
+
+        <!-- container for the displayed search result -->
+    <div id="display_Container">
+      <div id="display_MtgCard">
+        <img id="display_MtgImg" src="" alt="" />
+        <p id="display_CardHeader"></p>
+      </div class="display_UlContainer">
+      <ul id="display_Ul">
+        <p id="display_UlLabel"></p>
       </ul>
     </div>
     <script src="script.js"></script>
