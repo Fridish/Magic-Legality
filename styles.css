@@ -1,9 +1,9 @@
 :root {
   --Off-Pink: #ffe4d9;
   --Off-Black: #2f3543;
-  --Off-White: rgb(128, 119, 139);
-  --Dark: rgb(28, 28, 37);
-  --Shadow: rgba(27, 26, 26, 0.75);
+  --Off-White: #80778b;
+  --Dark: #1c1c25;
+  --Shadow: #1b1a1abf;
 }
 
 /* Scrollbar */
