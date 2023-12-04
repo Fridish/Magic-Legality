@@ -51,16 +51,17 @@ body {
 }
 .header_InfoText {
   font-size: 16px;
-  margin: 16px;
+  margin: 32px;
   text-align: center;
+  max-width: 350px;
 }
 
 /* css for the input and buttons */
 .input_Container {
   display: flex;
   flex-direction: row;
-  width: 200px;
-  height: 25px;
+  width: 240px;
+  height: 35px;
   background-color: var(--Off-Black);
   opacity: 0.7;
   border-radius: 35px;
@@ -74,8 +75,9 @@ body {
   background-color: transparent;
 }
 #input_CardName {
-  width: 160px;
-  font-size: 12px;
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
   color: var(--Off-Pink);
 }
 #button_GetSpecific {
@@ -185,6 +187,11 @@ li:first-child {
   #header_Header {
     font-size: 60px;
   }
+  .header_InfoText {
+    margin: 32px;
+    max-width: 500px;
+  }
+
   .input_Container {
     width: 450px;
     height: 50px;
@@ -238,6 +245,9 @@ li:first-child {
   /* upper body styles */
   #header_Header {
     font-size: 80px;
+  }
+  .header_InfoText {
+    max-width: none;
   }
   .input_Container {
     width: 750px;
